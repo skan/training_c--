@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1372627806 source:/home/skander/boulot/c++/project_1/Arme.cpp
+	"Arme.h"
+
+1372627789 /home/skander/boulot/c++/project_1/Arme.h
+	<iostream>
+	<string>
+
