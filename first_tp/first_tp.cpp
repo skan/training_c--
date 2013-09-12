@@ -4,19 +4,17 @@ using namespace std;
 
 int main()
 {
-   int monAge (32);
-   int monChiffre;
-   int &maReference (monAge);
-   string const Description ("Programme d'apprentissage du c++");
-   double const pi (3.14);
-   string monNome("Skander Hamza");
-   cout << Description << endl;
-   cout << "Hello world !" << endl;
-   cout << "mon age est " << monAge << " et je m'appelle " << monNome << endl;
-   cout << "reference verification " << maReference << endl;
-   cout << "demande un chiffre" << endl;
-   cin >> monChiffre;
-   cout << "mon chiffre vaut " << monChiffre << endl;
-
+   cout << "firt c++ exercice, addition a + b " << endl;
+   int a(0), b(0),c(0);
+   int reste;
+   cout << "entrez la valeur de a" << endl;
+   cin >> a;
+   cout << "entrez la valeur de b" << endl;
+   cin >> b;
+   c = a + b ;
+   cout << a << " + " << b << " = " << c << endl;
+   reste = a % b;
+   c = a / b;
+   cout << a << " / " << b << " = " << c << " et il reste : " << reste << endl;
    return 0;
 }

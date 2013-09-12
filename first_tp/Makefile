@@ -8,7 +8,7 @@ CFLAGS=-c -Wall
 all: first_tp
 
 first_tp: first_tp.o
-	$(CC) first_tp.cpp -o hello
+	$(CC) first_tp.cpp -o first_tp
 
 first_tp.o: first_tp.cpp
 	$(CC) $(CFLAGS) first_tp.cpp
