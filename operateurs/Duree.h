@@ -21,9 +21,15 @@ class Duree
     int m_secondes;
 };
 
+// Operators #############################
+
+std::ostream& operator<<(std::ostream &flux, Duree const& duree);
+bool operator==(Duree const& a, Duree const& b);
+bool operator!=(Duree const& a, Duree const& b);
 Duree operator+(Duree const& a, Duree const& b);
 Duree operator+(Duree const& a, int const secondes);
 Duree operator-(Duree const& a, Duree const& b);
-
+bool operator <(Duree const &a, Duree const &b);
+bool operator >(Duree const &a, Duree const &b);
 
 #endif

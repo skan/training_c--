@@ -3,40 +3,6 @@
 
 using namespace std;
 
-ostream& operator<<( ostream &flux, Duree const& duree )
-{
-   //flux << duree.m_heures << "h" << duree.m_minutes << "m" << duree.m_secondes << "s"; //Erreur
-   duree.afficher(flux);
-   return flux;
-}
-
-bool operator==(Duree const& a, Duree const& b)
-{
-   return a.estEgal(b);
-}
-bool operator!=(Duree const& a, Duree const& b)
-{
-   if (a == b)
-      return false;
-   else 
-      return true;
-}
-
-bool operator <(Duree const &a, Duree const &b)
-{
-   if (a.estInferieur(b))
-      return true;
-   else
-      return false;
-}
-bool operator >(Duree const &a, Duree const &b)
-{
-   if ( a < b || a == b )
-      return false;
-   else
-      return true;
-}
-
 int main()
 {
    Duree duree1(3, 10, 2), duree2(3, 3, 27), duree3(3, 3, 27);
