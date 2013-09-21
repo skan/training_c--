@@ -1,0 +1,10 @@
+Hello world dans fichier
+Mon nom est sk et mon age est : 1
+Hello world dans fichier
+Mon nom est skander et mon age est : 2
+Hello world dans fichier
+Mon nom est sk et mon age est : 22
+Hello world dans fichier
+Mon nom est skiki et mon age est : 32
+Hello world dans fichier
+Mon nom est skikiki et mon age est : 0
