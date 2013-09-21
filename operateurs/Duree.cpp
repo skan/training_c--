@@ -107,7 +107,7 @@ bool Duree::estInferieur(Duree const& b) const
       return true;
    else if (m_heures == b.m_heures && m_minutes < b.m_minutes)
       return true;
-   else if (m_heures == b.m_heures && m_minutes && b.m_minutes && m_secondes < b.m_secondes)
+   else if (m_heures == b.m_heures && m_minutes < b.m_minutes && m_secondes < b.m_secondes)
       return true;
    else
       return false;

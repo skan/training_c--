@@ -29,6 +29,13 @@ bool operator <(Duree const &a, Duree const &b)
    else
       return false;
 }
+bool operator >(Duree const &a, Duree const &b)
+{
+   if ( a < b || a == b )
+      return false;
+   else
+      return true;
+}
 
 int main()
 {
@@ -49,7 +56,7 @@ int main()
    resultat.afficher();
 
    cout << resultat ;
-   if (duree2 < duree1)
+   if (duree1 > duree2)
       cout << "bingo" << endl;
    return 0;
 }
