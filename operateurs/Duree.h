@@ -12,6 +12,7 @@ class Duree
     void afficher() const;
     void afficher(std::ostream & flux) const;
     bool estEgal(Duree const& b) const;
+    bool estInferieur(Duree const& b) const;
 
     private:
 

@@ -22,6 +22,14 @@ bool operator!=(Duree const& a, Duree const& b)
       return true;
 }
 
+bool operator <(Duree const &a, Duree const &b)
+{
+   if (a.estInferieur(b))
+      return true;
+   else
+      return false;
+}
+
 int main()
 {
    Duree duree1(3, 10, 2), duree2(3, 3, 27), duree3(3, 3, 27);
@@ -41,7 +49,7 @@ int main()
    resultat.afficher();
 
    cout << resultat ;
-   if (duree1 != duree3)
+   if (duree2 < duree1)
       cout << "bingo" << endl;
    return 0;
 }

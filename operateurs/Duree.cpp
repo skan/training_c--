@@ -101,3 +101,14 @@ bool Duree::estEgal(Duree const& b) const
    else
       return 0;
 }
+bool Duree::estInferieur(Duree const& b) const
+{
+   if (m_heures < b.m_heures)
+      return true;
+   else if (m_heures == b.m_heures && m_minutes < b.m_minutes)
+      return true;
+   else if (m_heures == b.m_heures && m_minutes && b.m_minutes && m_secondes < b.m_secondes)
+      return true;
+   else
+      return false;
+}
