@@ -11,6 +11,7 @@ class Duree
     Duree& operator-=(const Duree &duree2);
     void afficher() const;
     void afficher(std::ostream & flux) const;
+    bool estEgal(Duree const& b) const;
 
     private:
 

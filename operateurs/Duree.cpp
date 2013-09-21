@@ -91,6 +91,13 @@ void Duree::afficher() const
 }
 void Duree::afficher(std::ostream & flux) const
 {
-   flux << m_heures << "h" << m_minutes << "m" << m_secondes << "s";
+   flux << m_heures << "h" << m_minutes << "m" << m_secondes << "s" << endl;
 }
 	
+bool Duree::estEgal(Duree const& b) const
+{
+   if ((m_secondes == b.m_secondes) && (m_minutes == b.m_minutes) && (m_heures == b.m_heures))
+      return 1;
+   else
+      return 0;
+}

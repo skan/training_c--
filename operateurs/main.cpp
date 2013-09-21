@@ -10,9 +10,21 @@ ostream& operator<<( ostream &flux, Duree const& duree )
    return flux;
 }
 
+bool operator==(Duree const& a, Duree const& b)
+{
+   return a.estEgal(b);
+}
+bool operator!=(Duree const& a, Duree const& b)
+{
+   if (a == b)
+      return false;
+   else 
+      return true;
+}
+
 int main()
 {
-   Duree duree1(3, 10, 2), duree2(3, 3, 27);
+   Duree duree1(3, 10, 2), duree2(3, 3, 27), duree3(3, 3, 27);
    Duree resultat;
 
    duree1.afficher();
@@ -29,6 +41,8 @@ int main()
    resultat.afficher();
 
    cout << resultat ;
+   if (duree1 != duree3)
+      cout << "bingo" << endl;
    return 0;
 }
 
