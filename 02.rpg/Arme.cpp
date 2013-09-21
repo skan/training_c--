@@ -16,7 +16,12 @@ void Arme::changer(std::string nom, int degats)
    m_degats = degats;
 }
 
-void Arme::afficher() const;
+void Arme::afficher() const
 {
    cout << "L'arme utilisée actuellement est : " << m_arme << endl;
+}
+
+int getDegats() const
+{
+   return m_degats;
 }

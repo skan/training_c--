@@ -2,13 +2,13 @@
  
 using namespace std;
  
-Personnage::Personnage() : m_vie(100), m_mana(100), m_nomArme("Epée rouillee"), m_degatsArme(10)
+Personnage::Personnage() : m_vie(100), m_mana(100), m_arme ("Epée rouillee", 10)
 {
 }
-Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100),m_nomArme(nomArme), m_degatsArme(degatsArme)
+Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100), m_arme (nomArme, degatsArme)
 {  
 }
-Personnage::Personnage(int maVie, int monMana, string nomArme, int degatsArme) : m_vie(maVie), m_mana(monMana),m_nomArme(nomArme), m_degatsArme(degatsArme)
+Personnage::Personnage(int maVie, int monMana, string nomArme, int degatsArme) : m_vie(maVie), m_mana(monMana),m_arme (nomArme, degatsArme)
 {
 }
 Personnage::~Personnage()
@@ -28,7 +28,7 @@ void Personnage::recevoirDegats(int nbDegats)
  
 void Personnage::attaquer(Personnage &cible)
 {
-    cible.recevoirDegats(m_degatsArme);
+    cible.recevoirDegats(m_arme.getDegats());
     //On inflige à la cible les dégâts que cause notre arme
 }
  
@@ -44,8 +44,7 @@ void Personnage::boirePotionDeVie(int quantitePotion)
  
 void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
 {
-    m_nomArme = nomNouvelleArme;
-    m_degatsArme = degatsNouvelleArme;
+    m_arme.changerArme(nomNouvelleArme, degatsNouvelleArme);
 }
  
 bool Personnage::estVivant() const
@@ -58,4 +57,12 @@ bool Personnage::estVivant() const
     {
         return false; //FAUX, il n'est plus vivant !
     }
+}
+
+void Personnage::afficheEtat()
+{
+   cout << "vie = " << m_vie;
+   cout << "Mana = " << m_mana;
+   cout << "Arme = " << m_arme.afficher();
+   cout << "Degats = " << m_arme.getDegats();
 }

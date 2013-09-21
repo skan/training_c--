@@ -9,13 +9,6 @@ Duree::Duree(int heures, int minutes, int secondes)
 
 }
 
-Duree operator+(Duree const& a, Duree const& b)
-{
-   Duree copie (a);
-   copie +=b;
-   return copie;
-}
-
 Duree& Duree::operator+=(const Duree &duree2)
 {
    m_secondes += duree2.m_secondes; // Exceptionnellement autorisé car même classe
@@ -27,47 +20,41 @@ Duree& Duree::operator+=(const Duree &duree2)
    return *this;
 }
 
-Duree operator-(Duree const& a, Duree const& b)
-{
-   Duree copie (a);
-   copie -=b;
-   return copie;
-}
 Duree& Duree::operator-=(const Duree &duree2)
 {
    int retenue (0);
    if (m_secondes < duree2.m_secondes)
 	{
-	  m_secondes = 60 - duree2.m_secondes + m_secondes;
+	  m_secondes = 60 - duree2.m_secondes;
 	  retenue = 1;
 	} 
 	else
 	{
 	  m_secondes -= duree2.m_secondes;
 	}
-	if (m_minutes-retenue < duree2.m_minutes)
+	if (m_minutes+retenue < duree2.m_minutes)
 	{
-	  m_minutes = 60 - duree2.m_minutes + m_minutes - retenue;
+	  m_secondes = 60 - duree2.m_secondes;
 	  retenue = 1;
 	} 
 	else
 	{
-	  m_minutes -= (duree2.m_minutes + retenue);
+	  m_minutes -= duree2.m_minutes;
 	  retenue = 0;
 	}
 
-   	if (m_heures-retenue < duree2.m_heures)
+   	if (m_heures < duree2.m_heures)
    {
     	 cout << "duree ne peut pas etre negative";
    }
    else
    {
-	  m_heures -= (duree2.m_heures + retenue);
+	  m_heures -= duree2.m_heures;
    }
    return *this;
 }
 
-void Duree::afficher() const
+void Duree::Afficher()
 {
    cout << m_heures << ":" << m_minutes << ":" << m_secondes << endl;
 }
