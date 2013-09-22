@@ -12,6 +12,7 @@ class ZFraction
       ZFraction& operator+=(const ZFraction &fraction2);
       ZFraction& operator*=(const ZFraction &fraction2);
       bool isGreaterThan(const ZFraction & fraction2) const ;
+      bool isEqualTo(const ZFraction & fraction2) const ;
 
    private:
       int m_nominateur;
@@ -25,5 +26,6 @@ std::ostream& operator<<(std::ostream& stream, ZFraction const& fraction);
 ZFraction operator+(ZFraction const& fraction1, ZFraction const& fration2);
 ZFraction operator*(ZFraction const& fraction1, ZFraction const& fration2);
 bool operator>(ZFraction const& fraction1, ZFraction const& fraction2);
+bool operator==(ZFraction const& fraction1, ZFraction const& fraction2);
 
 #endif
