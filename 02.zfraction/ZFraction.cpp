@@ -21,13 +21,33 @@ void ZFraction::afficher() const
 
 void ZFraction::afficher(std::ostream& stream) const
 {
-   stream << m_nominateur << "/" << m_denominateur << endl;
+   stream << m_nominateur << "/" << m_denominateur;
 }
+
+ZFraction& ZFraction::operator+=(const ZFraction &fraction2)
+{
+   if (fraction2.m_denominateur == m_denominateur)
+   {
+      m_nominateur += fraction2.m_nominateur;
+   }
+   else 
+   {
+      m_nominateur = (m_nominateur*fraction2.m_denominateur) + (m_denominateur*fraction2.m_nominateur);
+      m_denominateur *= fraction2.m_denominateur;
+   }
+   return *this;
+}
+
 
 /************************************************************************ 
  * Operators
  * ************************************************************************/ 
-
+ZFraction operator+(ZFraction const& fraction1, ZFraction const& fraction2)
+{
+   ZFraction copie(fraction1);
+   copie += fraction2;
+   return copie;
+}
 std::ostream& operator<<(std::ostream& stream, ZFraction const& fraction)
 {
    fraction.afficher(stream);

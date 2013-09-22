@@ -13,14 +13,13 @@ int main()
     b.afficher();
     c.afficher();
     d.afficher();
- #if 0
  
     c = a+b;               //Calcule 4/5 + 2/1 = 14/5
  
-    d = a*b;               //Calcule 4/5 * 2/1 = 8/5
+//    d = a*b;               //Calcule 4/5 * 2/1 = 8/5
  
     cout << a << " + " << b << " = " << c << endl;
- 
+#if 0 
     cout << a << " * " << b << " = " << d << endl;
  
     if(a > b)
