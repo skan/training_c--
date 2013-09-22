@@ -13,6 +13,7 @@ class ZFraction
       ZFraction& operator*=(const ZFraction &fraction2);
       bool isGreaterThan(const ZFraction & fraction2) const ;
       bool isEqualTo(const ZFraction & fraction2) const ;
+      bool simplifier(const int diviseur);
 
    private:
       int m_nominateur;
@@ -27,5 +28,6 @@ ZFraction operator+(ZFraction const& fraction1, ZFraction const& fration2);
 ZFraction operator*(ZFraction const& fraction1, ZFraction const& fration2);
 bool operator>(ZFraction const& fraction1, ZFraction const& fraction2);
 bool operator==(ZFraction const& fraction1, ZFraction const& fraction2);
+int pgcd (int nominateur, int denominateur);
 
 #endif

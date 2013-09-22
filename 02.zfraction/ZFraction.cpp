@@ -12,6 +12,9 @@ ZFraction::ZFraction(int nominateur): m_nominateur(nominateur), m_denominateur(1
 
 ZFraction::ZFraction(int nominateur, int denominateur) : m_nominateur(nominateur), m_denominateur(denominateur)
 {
+   int diviseur;
+   diviseur = pgcd(m_nominateur, m_denominateur);
+   simplifier(diviseur);
 }
 
 void ZFraction::afficher() const
@@ -26,6 +29,7 @@ void ZFraction::afficher(std::ostream& stream) const
 
 ZFraction& ZFraction::operator+=(const ZFraction &fraction2)
 {
+   int diviseur;
    if (fraction2.m_denominateur == m_denominateur)
    {
       m_nominateur += fraction2.m_nominateur;
@@ -35,13 +39,20 @@ ZFraction& ZFraction::operator+=(const ZFraction &fraction2)
       m_nominateur = (m_nominateur*fraction2.m_denominateur) + (m_denominateur*fraction2.m_nominateur);
       m_denominateur *= fraction2.m_denominateur;
    }
+   diviseur = pgcd(m_nominateur, m_denominateur);
+   simplifier(diviseur);
    return *this;
 }
 
 ZFraction& ZFraction::operator*=(const ZFraction &fraction2)
 {
+   int diviseur(1);
    m_nominateur *= fraction2.m_nominateur;
    m_denominateur *= fraction2.m_denominateur;
+
+   diviseur = pgcd(m_nominateur, m_denominateur);
+   simplifier(diviseur);
+   
    return *this;
 }
 bool ZFraction::isGreaterThan(const ZFraction & fraction2) const
@@ -60,16 +71,13 @@ bool ZFraction::isEqualTo(const ZFraction & fraction2) const
       return false;
 }
 
-int ZFraction:pgcd ()
+bool ZFraction::simplifier(const int diviseur)
 {
-   int diviseur(2);
-   while (i <= m_denominateur)
-   {
-      if (m_denominateur % diviseur == 0 & m_nominateur % diviseur == 0)
-         return i;
-   }
-   return 1;
+   m_nominateur /= diviseur;
+   m_denominateur /= diviseur;
+   return 0;
 }
+
 
 /************************************************************************ 
  * Operators
@@ -106,3 +114,19 @@ bool operator==(ZFraction const& fraction1, ZFraction const& fraction2)
    else
       return false;
 }
+/************************************************************************ 
+ * Fonctions
+ * ************************************************************************/ 
+
+int pgcd (int nominateur, int denominateur)
+{
+   int diviseur(2);
+   while (diviseur <= denominateur)
+   {
+      if ((denominateur % diviseur == 0) & (nominateur % diviseur == 0))
+         return diviseur;
+      diviseur++;
+   }
+   return 1;
+}
+
