@@ -60,6 +60,17 @@ bool ZFraction::isEqualTo(const ZFraction & fraction2) const
       return false;
 }
 
+int ZFraction:pgcd ()
+{
+   int diviseur(2);
+   while (i <= m_denominateur)
+   {
+      if (m_denominateur % diviseur == 0 & m_nominateur % diviseur == 0)
+         return i;
+   }
+   return 1;
+}
+
 /************************************************************************ 
  * Operators
  * ************************************************************************/ 
