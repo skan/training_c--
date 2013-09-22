@@ -44,7 +44,13 @@ ZFraction& ZFraction::operator*=(const ZFraction &fraction2)
    m_denominateur *= fraction2.m_denominateur;
    return *this;
 }
-
+bool ZFraction::isGreaterThan(const ZFraction & fraction2) const
+{
+   if (m_nominateur*fraction2.m_denominateur < fraction2.m_nominateur*m_denominateur)
+      return false;
+   else
+      return true;
+}
 
 /************************************************************************ 
  * Operators
@@ -65,4 +71,12 @@ std::ostream& operator<<(std::ostream& stream, ZFraction const& fraction)
 {
    fraction.afficher(stream);
    return stream;
+}
+
+bool operator>(ZFraction const& fraction1, ZFraction const& fraction2)
+{
+   if (fraction1.isGreaterThan(fraction2))
+      return true;
+   else
+      return false;
 }

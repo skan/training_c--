@@ -15,10 +15,10 @@ int main()
  
     cout << a << " + " << b << " = " << c << endl;
     cout << a << " * " << b << " = " << d << endl;
-#if 0 
  
     if(a > b)
         cout << "a est plus grand que b." << endl;
+#if 0 
     else if(a==b)
         cout << "a est egal a b." << endl;
     else
