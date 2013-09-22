@@ -13,9 +13,9 @@ class ZFraction
       ZFraction& operator*=(const ZFraction &fraction2);
       bool isGreaterThan(const ZFraction & fraction2) const ;
       bool isEqualTo(const ZFraction & fraction2) const ;
-      bool simplifier(const int diviseur);
 
    private:
+      bool simplifier();
       int m_nominateur;
       int m_denominateur;
 };

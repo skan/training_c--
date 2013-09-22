@@ -12,9 +12,7 @@ ZFraction::ZFraction(int nominateur): m_nominateur(nominateur), m_denominateur(1
 
 ZFraction::ZFraction(int nominateur, int denominateur) : m_nominateur(nominateur), m_denominateur(denominateur)
 {
-   int diviseur;
-   diviseur = pgcd(m_nominateur, m_denominateur);
-   simplifier(diviseur);
+   simplifier();
 }
 
 void ZFraction::afficher() const
@@ -29,7 +27,6 @@ void ZFraction::afficher(std::ostream& stream) const
 
 ZFraction& ZFraction::operator+=(const ZFraction &fraction2)
 {
-   int diviseur;
    if (fraction2.m_denominateur == m_denominateur)
    {
       m_nominateur += fraction2.m_nominateur;
@@ -39,19 +36,16 @@ ZFraction& ZFraction::operator+=(const ZFraction &fraction2)
       m_nominateur = (m_nominateur*fraction2.m_denominateur) + (m_denominateur*fraction2.m_nominateur);
       m_denominateur *= fraction2.m_denominateur;
    }
-   diviseur = pgcd(m_nominateur, m_denominateur);
-   simplifier(diviseur);
+   simplifier();
    return *this;
 }
 
 ZFraction& ZFraction::operator*=(const ZFraction &fraction2)
 {
-   int diviseur(1);
    m_nominateur *= fraction2.m_nominateur;
    m_denominateur *= fraction2.m_denominateur;
 
-   diviseur = pgcd(m_nominateur, m_denominateur);
-   simplifier(diviseur);
+   simplifier();
    
    return *this;
 }
@@ -71,8 +65,9 @@ bool ZFraction::isEqualTo(const ZFraction & fraction2) const
       return false;
 }
 
-bool ZFraction::simplifier(const int diviseur)
+bool ZFraction::simplifier()
 {
+   int diviseur (pgcd(m_nominateur, m_denominateur));
    m_nominateur /= diviseur;
    m_denominateur /= diviseur;
    return 0;
