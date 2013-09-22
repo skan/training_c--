@@ -38,6 +38,13 @@ ZFraction& ZFraction::operator+=(const ZFraction &fraction2)
    return *this;
 }
 
+ZFraction& ZFraction::operator*=(const ZFraction &fraction2)
+{
+   m_nominateur *= fraction2.m_nominateur;
+   m_denominateur *= fraction2.m_denominateur;
+   return *this;
+}
+
 
 /************************************************************************ 
  * Operators
@@ -46,6 +53,12 @@ ZFraction operator+(ZFraction const& fraction1, ZFraction const& fraction2)
 {
    ZFraction copie(fraction1);
    copie += fraction2;
+   return copie;
+}
+ZFraction operator*(ZFraction const& fraction1, ZFraction const& fraction2)
+{
+   ZFraction copie(fraction1);
+   copie *= fraction2;
    return copie;
 }
 std::ostream& operator<<(std::ostream& stream, ZFraction const& fraction)
