@@ -1,8 +1,9 @@
 #include "Arme.h"
+#include <iostream>
  
 using namespace std;
  
-Arme::Arme() : m_nom ("Arme Rouillée"), m_degats (10)
+Arme::Arme(): m_nom ("Arme Rouillée"), m_degats (10)
 {
 }
 
