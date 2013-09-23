@@ -9,6 +9,7 @@ int main()
 {
     // Création des personnages
     Personnage david, goliath("Epée aiguisée", 20);
+    Personnage skander(david);
 
     // Au combat !
     goliath.attaquer(david);
@@ -23,6 +24,9 @@ int main()
     david.afficherEtat();
     cout << endl << "Goliath" << endl;
     goliath.afficherEtat();
+
+    cout << "skander" << endl;
+    skander.afficherEtat();
 
     return 0;
 }

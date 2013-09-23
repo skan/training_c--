@@ -5,6 +5,9 @@
 using namespace std;
 
 
+/************************************************************************ 
+ * Constructeurs
+ * ************************************************************************/ 
 Personnage::Personnage() : m_vie(100), m_mana(100),m_arme(0)
 {
    m_arme = new Arme();
@@ -20,6 +23,14 @@ Personnage::~Personnage()
    delete m_arme;
 }
 
+// Constructeur de copie 
+Personnage::Personnage(Personnage const& personnageACopier) : m_vie(personnageACopier.m_vie), m_mana(personnageACopier.m_mana), m_arme(0)
+{
+   m_arme = new Arme(*(personnageACopier.m_arme));
+}
+/************************************************************************ 
+ * Methodes
+ * ************************************************************************/ 
 void Personnage::recevoirDegats(int nbDegats)
 {
     m_vie -= nbDegats;
@@ -69,7 +80,9 @@ void Personnage::afficherEtat()
     m_arme->afficher();
 }
 
+#if 0
 Personnage* Personnage::getAdresse() const
 {
    return this;
 }
+#endif
