@@ -23,7 +23,7 @@ class Personnage
 
     int m_vie;
     int m_mana;
-    Arme m_arme;
+    Arme *m_arme; //l'arme est un pointeur, l'object n'est plus contenu dans le personnage
 };
 
 #endif

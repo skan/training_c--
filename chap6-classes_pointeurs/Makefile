@@ -3,7 +3,7 @@ CFLAGS=-c -Wall
 LDFLAGS=
 SOURCES=main.cpp Personnage.cpp Arme.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=hello
+EXECUTABLE=out
 
 all: $(SOURCES) $(EXECUTABLE)
 	
