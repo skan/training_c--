@@ -27,6 +27,10 @@ int main()
 
     cout << "skander" << endl;
     skander.afficherEtat();
+    david.attaquer(skander);
+    skander=goliath;
+    cout << "skander apres attaque et copie" << endl;
+    skander.afficherEtat();
 
     return 0;
 }
