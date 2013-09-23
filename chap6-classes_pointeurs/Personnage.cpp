@@ -68,3 +68,8 @@ void Personnage::afficherEtat()
     cout << "Mana : " << m_mana << endl;
     m_arme->afficher();
 }
+
+Personnage* Personnage::getAdresse() const
+{
+   return this;
+}

@@ -18,6 +18,7 @@ class Personnage
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
     bool estVivant();
     void afficherEtat();
+    Personnage* getAdresse() const;
 
     private:
 
