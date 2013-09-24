@@ -9,8 +9,11 @@ using namespace std;
 int main()
 {
     // Création des personnages
-    Personnage david(); 
+    Personnage david; 
     Guerrier skander;
+
+    david.coupDePoing(skander);
+    skander.coupDePoing(david);
 
     return 0;
 }
