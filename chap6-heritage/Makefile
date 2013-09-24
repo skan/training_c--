@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=main.cpp Personnage.cpp
+SOURCES=main.cpp Personnage.cpp Guerrier.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=out
 

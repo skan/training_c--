@@ -9,7 +9,6 @@ class Personnage
     public:
 
     Personnage();
-    ~Personnage();
     void recevoirDegats(int nbDegats);
     void coupDePoing(Personnage &cible) const;
 
