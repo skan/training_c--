@@ -1,0 +1,22 @@
+#ifndef DEF_PERSONNAGE
+#define DEF_PERSONNAGE
+
+#include <iostream>
+#include <string>
+
+class Personnage
+{
+    public:
+
+    Personnage();
+    ~Personnage();
+    void recevoirDegats(int nbDegats);
+    void coupDePoing(Personnage &cible) const;
+
+    private:
+
+    int m_vie;
+    std::string m_nom;
+};
+
+#endif

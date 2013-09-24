@@ -1,0 +1,161 @@
+commit 6ab92689dfadf9460c0d3aefdf7cb65101220b01
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Tue Sep 24 00:56:11 2013 +0200
+
+    chap6. classes et pointeurs start
+
+commit d753bf30eb8a782064ed49e8297fbcebf08856b7
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Mon Sep 23 00:24:02 2013 +0200
+
+    chap3-classe & pointeurs: personnage skeleton
+
+commit e9b08174364cc94fe88c74aed0ec8ae51fc29a10
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Mon Sep 23 00:23:24 2013 +0200
+
+    chap2-tp zfraction: add correction complete
+
+commit 7e215f67aa54ce4b78b44d78bced3931dbe19909
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Mon Sep 23 00:06:21 2013 +0200
+
+    chap2-tp zfraction: tuned simplify
+
+commit 5a798b188b291897451f0b8b88fd97130e88a1d8
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 23:43:46 2013 +0200
+
+    chap2-tp zfraction: add pgcd management
+
+commit 11c06ca9ee9c67a29485b1af46f7b11fdb6296ca
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 22:20:31 2013 +0200
+
+    chap2-tp zfraction: add z correction
+
+commit c57760b84b34ff44323b6652cebc2bdb3f0186ae
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 13:24:26 2013 +0200
+
+    chap2-tp zfraction: add == operator surcharge and finich tp
+
+commit c67d9175aa6a2233afe0c0b2fb02e44adbe0af59
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 13:06:26 2013 +0200
+
+    chap2-tp zfraction: add > operator surcharge
+
+commit dccccc1a06dbf171be85af8ed80617c6e3eba71b
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 12:38:31 2013 +0200
+
+    chap2-tp zfraction: add * operator surcharge
+
+commit b4a809ec287e3c1bcc171abab2ca3303d5924104
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 12:34:35 2013 +0200
+
+    chap2-tp zfraction: add + operator surcharge
+
+commit 52d44e3d83ea51a696de8091eddc4b080b1ddae6
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 12:08:00 2013 +0200
+
+    add fraction definition and its << surcharge
+
+commit 439d574ba59fa8134e86d895443497a5e1c616ca
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sun Sep 22 10:50:34 2013 +0200
+
+    chap2-tp zfraction: first skeleton
+
+commit 07eb183bf928ce050d628deae0972011109ee912
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 12:25:09 2013 +0200
+
+    chap3-stream's operators: clean code
+
+commit e9a8a6cb1a015dc75f7f21c7b9c9f74500ebd66b
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 12:06:14 2013 +0200
+
+    chap3-stream's operators: add correction
+
+commit 0636001b9d15bf6c0fbe65ec9109bc1ec34532ba
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 12:04:19 2013 +0200
+
+    chap3-stream's operators: fix < and add >
+
+commit 70e1366e86388eb69fdf556618af823bd2613b5e
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 11:53:32 2013 +0200
+
+    chap3-stream's operators: add <
+
+commit 2bf7b3b3e8efef9e920b1af7fe65f6f47c72bc5b
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 11:34:48 2013 +0200
+
+    chap3-stream's operators: add == & !=
+
+commit 41dddc6a71a96c5f57ca3f09a5ce3d4878871957
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 11:16:36 2013 +0200
+
+    add gitignore *.o et out
+
+commit 556cdf96749b17fe7924890506f4a961ce5b6363
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 11:15:31 2013 +0200
+
+    let's be organized git status
+
+commit 51e80c570deb41d8046c4ce3641246da797a6f95
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 11:07:42 2013 +0200
+
+    define duree operation for cout
+
+commit 4fc25869ef812c0c2b4ad37da0d20757169f124d
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Sat Sep 21 09:47:00 2013 +0200
+
+    operateurs avec soustraction
+
+commit d878f81f425ad8266c7ee91fb5167747d5aaec9f
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Fri Sep 20 01:32:50 2013 +0200
+
+    before Arme object
+
+commit 045cd55d46e2971d3495a979e2399d6fd6118421
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Fri Sep 13 22:27:06 2013 +0200
+
+    dynamic talbes inside fonctions
+
+commit 086c55428887f5001ac9d80fb9e00624a5644a60
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Thu Sep 12 23:00:13 2013 +0200
+
+    add rectangle
+
+commit d2ad021358c885154a3a87866873b86d5328b604
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Thu Sep 12 22:38:07 2013 +0200
+
+    first tp, complement
+
+commit cea2a5eb98fea09f6bcac3f856383bf63c256cc0
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Thu Sep 12 22:23:11 2013 +0200
+
+    first tp
+
+commit 6c1cc894ff7e9d3d4c6ea666c0a9a61bc6ee5a82
+Author: Skander <Skander.hamza@gmail.com>
+Date:   Thu Sep 12 22:20:32 2013 +0200
+
+    first commit
