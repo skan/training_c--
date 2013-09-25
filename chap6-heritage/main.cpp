@@ -9,8 +9,8 @@ using namespace std;
 int main()
 {
     // Création des personnages
-    Personnage david; 
-    Guerrier skander;
+    Personnage *david(); 
+    Guerrier *skander new Guerrier();
 
     david.coupDePoing(skander);
     skander.coupDePoing(david);
