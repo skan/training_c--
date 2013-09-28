@@ -9,6 +9,8 @@
 class Guerrier : public Personnage
 //Signifie : créer une classe Guerrier qui hérite de la classe Personnage
 {
+   Guerrier();
+   Guerrier(std::string);
   
 };
   
