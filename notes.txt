@@ -1,0 +1,6 @@
+chap 6 - derivation de type
+   on peut affecter un élément enfant a un element parent
+   Les objets restent comme ils sont dans la mémoire, on ne fait que diriger le pointeur vers la partie de la fille qui a été héritée. 
+   En faisant objetMere = objetFille;, on dirige le pointeur objetMere vers les attributs et méthodes hérités uniquement
+   skh: utilisés par vraiment comprises ??? 
+   skh: a tester en ajouter des methodes pour modifier les attributs des classes filles et meres et voir resultat apres affectation

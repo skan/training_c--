@@ -9,11 +9,21 @@ using namespace std;
 int main()
 {
     // Création des personnages
-    Personnage *david(); 
-    Guerrier *skander new Guerrier();
+    Personnage *david(0); 
+    Guerrier *skander = new Guerrier() ;
 
-    david.coupDePoing(skander);
+    cout << david << endl;
+    cout << skander << endl << endl;
+
+    david = skander;
+
+    cout << david << endl;
+    cout << skander << endl;
+
+#if 0
+    david.coupDePoing(skander); // doesn't compile
     skander.coupDePoing(david);
+#endif
 
     return 0;
 }
