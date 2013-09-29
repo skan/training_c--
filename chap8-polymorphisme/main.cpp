@@ -6,13 +6,21 @@
 
 using namespace std;
 
+void presenter(Vehicule v) ///Presente le vehicule passé en argument
+{
+   v.affiche();
+}
+
 int main()
 {
    Vehicule v;
-   v.affiche();   
+   //v.affiche();   
+   presenter(v);
+
 
    Moto m;
-   m.affiche();
+   //m.affiche();
+   presenter(m);
 
    return 0;
 }
