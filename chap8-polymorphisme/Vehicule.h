@@ -4,7 +4,9 @@
 class Vehicule
 {
     public:
+    Vehicule(int prix);
     virtual void affiche() const;  //Affiche une description du Vehicule
+    virtual ~Vehicule();
  
     protected:
     int m_prix;  //Chaque véhicule a un prix

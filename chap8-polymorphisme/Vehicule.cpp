@@ -3,7 +3,12 @@
 
 using namespace std;
 
+Vehicule::Vehicule(int prix) : m_prix(prix)
+{}
+Vehicule::~Vehicule()
+{}
+
 void Vehicule::affiche() const
 {
-    cout << "Ceci est un vehicule." << endl;
+    cout << "Ceci est un vehicule coutant " << m_prix << "euros" << endl;
 }

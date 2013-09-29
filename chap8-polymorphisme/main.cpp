@@ -13,18 +13,11 @@ void presenter(Vehicule const& v) ///Presente le vehicule passé en argument
 
 int main()
 {
-   Vehicule v;
-   Vehicule *v1(0), *v2(0);
-   v1 = new Voiture;
-   v2 = new Moto;
-   //v.affiche();   
-   presenter(v);
 
-   Moto m;
-   //m.affiche();
-   presenter(m);
+   Vehicule *v1(0);
+   v1 = new Voiture(45,2);
+   v1->affiche();
+   delete v1;
 
-   presenter(*v1);
-   presenter(*v2);
    return 0;
 }

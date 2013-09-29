@@ -13,6 +13,7 @@ chap 16 - polymorphisme
    resolution dynamique des liens: faire en sorte a ce que le programme appelle la bonne version de la methode
    virtual: il n'est pas necessaire de le mettre devant les methodes des classes filles. elles le sont automatiquement. Les mettre est cependant meilleur pour se souvenir de leur particularité.
    virtual: pas de virtual dans .cpp !
+   Un destructeur doit toujours etre virtuel si on utilise le polymorphisme
 
 
    
