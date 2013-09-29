@@ -13,6 +13,7 @@ class Guerrier : public Personnage
 
    Guerrier();
    void frapperCommeUnSourdAvecUnMarteau() const; //Méthode qui ne concerne que les guerriers
+   void afficherVie() const; //Méthode qui ne concerne que les guerriers
 
    private:
    

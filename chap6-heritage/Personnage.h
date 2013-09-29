@@ -15,8 +15,11 @@ class Personnage
 
     private:
 
-    int m_vie;
     std::string m_nom;
+
+    protected:
+
+    int m_vie;
 };
 
 #endif

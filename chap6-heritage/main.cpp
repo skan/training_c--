@@ -10,7 +10,8 @@ int main()
 {
     // Création des personnages
     Personnage *david(0); 
-    Guerrier *skander = new Guerrier() ;
+    Guerrier *mohamed = new Guerrier();
+    Guerrier *skander = new Guerrier();
 
     cout << david << endl;
     cout << skander << endl << endl;
@@ -21,7 +22,10 @@ int main()
     cout << skander << endl;
 
     skander->afficher();
+    skander->afficherVie();
     david->afficher();
+    mohamed->afficher();
+
 
 #if 0
     david.coupDePoing(skander); // doesn't compile
