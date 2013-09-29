@@ -6,7 +6,7 @@
 class Moto : public Vehicule  //Une Moto EST UN Vehicule
 {
     public:
-    void affiche() const;
+    virtual void affiche() const;
   
     private:
     double m_vitesse;  //La vitesse maximale de la moto

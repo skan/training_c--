@@ -6,7 +6,7 @@
 class Voiture : public Vehicule //Une Voiture EST UN Vehicule
 {
     public:
-    void affiche() const;
+    virtual void affiche() const;
  
     private:
     int m_portes;  //Le nombre de portes de la voiture
