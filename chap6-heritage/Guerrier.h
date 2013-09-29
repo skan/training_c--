@@ -12,8 +12,10 @@ class Guerrier : public Personnage
    public:
 
    Guerrier();
+   Guerrier(std::string);
    void frapperCommeUnSourdAvecUnMarteau() const; //Méthode qui ne concerne que les guerriers
    void afficherVie() const; //Méthode qui ne concerne que les guerriers
+   void afficher() const;
 
    private:
    

@@ -13,6 +13,8 @@ int main()
     Guerrier *mohamed = new Guerrier();
     Guerrier *skander = new Guerrier();
 
+    Guerrier rambo("rambo");
+
     cout << david << endl;
     cout << skander << endl << endl;
 
@@ -25,6 +27,9 @@ int main()
     skander->afficherVie();
     david->afficher();
     mohamed->afficher();
+    rambo.afficher();
+
+
 
 
 #if 0

@@ -9,17 +9,15 @@ class Personnage
     public:
 
     Personnage();
+    Personnage(std::string nom);
     void recevoirDegats(int nbDegats);
     void afficher() const;
     void coupDePoing(Personnage &cible) const;
 
-    private:
-
-    std::string m_nom;
-
     protected:
 
     int m_vie;
+    std::string m_nom;
 };
 
 #endif

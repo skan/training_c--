@@ -1,6 +1,4 @@
-
 #include "Personnage.h"
-
 
 using namespace std;
 
@@ -12,6 +10,9 @@ Personnage::Personnage() : m_vie(100), m_nom("Jack")
 {
 }
 
+Personnage::Personnage(std::string nom) : m_vie(100), m_nom(nom)
+{
+}
 /************************************************************************ 
  * Methodes
  * ************************************************************************/ 
