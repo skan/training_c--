@@ -9,9 +9,14 @@
 class Guerrier : public Personnage
 //Signifie : créer une classe Guerrier qui hérite de la classe Personnage
 {
+   public:
+
    Guerrier();
-   Guerrier(std::string);
-  
+   void frapperCommeUnSourdAvecUnMarteau() const; //Méthode qui ne concerne que les guerriers
+
+   private:
+   
+   int m_puissance;
 };
   
 #endif

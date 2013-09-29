@@ -20,6 +20,9 @@ int main()
     cout << david << endl;
     cout << skander << endl;
 
+    skander->afficher();
+    david->afficher();
+
 #if 0
     david.coupDePoing(skander); // doesn't compile
     skander.coupDePoing(david);

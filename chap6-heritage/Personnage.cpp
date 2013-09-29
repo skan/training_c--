@@ -30,3 +30,9 @@ void Personnage::coupDePoing(Personnage &cible) const
     cible.recevoirDegats(10);
 }
 
+void Personnage::afficher() const
+{
+   cout << "Afficher Personnage" << endl;
+   cout << "   nom: " << m_nom << endl;
+   cout << "   vie: " << m_vie << endl;
+}

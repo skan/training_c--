@@ -10,6 +10,7 @@ class Personnage
 
     Personnage();
     void recevoirDegats(int nbDegats);
+    void afficher() const;
     void coupDePoing(Personnage &cible) const;
 
     private:
