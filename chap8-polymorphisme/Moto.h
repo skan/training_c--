@@ -7,6 +7,7 @@ class Moto : public Vehicule  //Une Moto EST UN Vehicule
 {
     public:
     Moto(int prix, double vitesseMax);
+    Moto(int prix, int annee, double vitesseMax);
     virtual void affiche() const;
     virtual ~Moto();
   

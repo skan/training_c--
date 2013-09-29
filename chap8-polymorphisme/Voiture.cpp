@@ -5,6 +5,8 @@ using namespace std;
 
 Voiture::Voiture(int prix, int portes) : Vehicule(prix), m_portes(portes)
 {}
+Voiture::Voiture(int prix, int annee, int portes) : Vehicule(prix,annee), m_portes(portes)
+{}
 Voiture::~Voiture()
 {}
 

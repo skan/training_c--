@@ -7,6 +7,7 @@ class Voiture : public Vehicule //Une Voiture EST UN Vehicule
 {
     public:
     Voiture(int prix, int portes);
+    Voiture(int prix, int annee, int portes);
     virtual void affiche() const;
     virtual ~Voiture();
  
