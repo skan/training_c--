@@ -4,6 +4,7 @@
 #include "Vehicule.h"
 #include "Moto.h"
 #include "Voiture.h"
+#include "Camion.h"
 
 using namespace std;
 
@@ -19,10 +20,12 @@ int main()
    listeVehicules.push_back(new Voiture(15000, 5));
    listeVehicules.push_back(new Voiture(12000, 3));
    listeVehicules.push_back(new Moto(2000, 212.5));
+   listeVehicules.push_back(new Camion(25000, 200));
 
    listeVehicules[0]->affiche();
    listeVehicules[1]->affiche();
    listeVehicules[2]->affiche();
+   listeVehicules[3]->affiche();
 
    for (int i(0); i < listeVehicules.size(); ++i)
    {
