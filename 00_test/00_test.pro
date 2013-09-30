@@ -1,1 +1,3 @@
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    Mafenetre.cpp
+HEADERS += MaFenetre.h
