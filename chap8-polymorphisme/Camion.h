@@ -9,6 +9,7 @@ class Camion : public Vehicule  //Une Moto EST UN Vehicule
     Camion(int prix, int poids);
     Camion(int prix, int annee, int poids);
     virtual void affiche() const;
+    virtual void afficheNmbreRoues() const;  //Affiche le nombre de roues du Vehicule
     virtual ~Camion();
   
     private:

@@ -9,6 +9,7 @@ class Voiture : public Vehicule //Une Voiture EST UN Vehicule
     Voiture(int prix, int portes);
     Voiture(int prix, int annee, int portes);
     virtual void affiche() const;
+    virtual void afficheNmbreRoues() const;  //Affiche le nombre de roues du Vehicule
     virtual ~Voiture();
  
     private:

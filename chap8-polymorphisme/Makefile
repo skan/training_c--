@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-c -Wall
+CFLAGS=-c -g -Wall
 LDFLAGS=
 SOURCES=main.cpp Vehicule.cpp Voiture.cpp Moto.cpp Camion.cpp Garage.cpp
 OBJECTS=$(SOURCES:.cpp=.o)

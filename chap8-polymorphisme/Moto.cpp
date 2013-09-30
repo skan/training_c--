@@ -13,3 +13,8 @@ void Moto::affiche() const
 {
     cout << "Ceci est une moto allant a " << m_vitesse << " km/h et countant " << m_prix << " euros."  << endl;
 }
+void Moto::afficheNmbreRoues() const
+{
+   Vehicule::afficheNmbreRoues();
+   cout << "une moto disposant de deux roues" << endl;
+}

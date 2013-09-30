@@ -14,3 +14,9 @@ void Voiture::affiche() const
 {
     cout << "Ceci est une voiture avec " << m_portes << " portes" << "et coutant " << m_prix << " euros" << endl;
 }
+
+void Voiture::afficheNmbreRoues() const
+{
+   Vehicule::afficheNmbreRoues();
+   cout << "une voiture disposant de quatre roues" << endl;
+}

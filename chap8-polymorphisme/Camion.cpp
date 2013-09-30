@@ -13,3 +13,8 @@ void Camion::affiche() const
 {
     cout << "Ceci est un Camion pesant " << m_poids << " Kg et coutant " << m_prix << " euros."  << endl;
 }
+void Camion::afficheNmbreRoues() const
+{
+   Vehicule::afficheNmbreRoues();
+   cout << "un Camion disposant de six roues" << endl;
+}
