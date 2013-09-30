@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Garage.h"
 #include "Vehicule.h"
 #include "Moto.h"
 #include "Voiture.h"
@@ -15,7 +16,12 @@ void presenter(Vehicule const& v) ///Presente le vehicule passé en argument
 
 int main()
 {
-
+   Garage monGarage;
+   Voiture *fiesta = new Voiture(25000, 2010, 3);
+   monGarage.ajouterVehicule(new Voiture(12000,5));
+   monGarage.ajouterVehicule(fiesta);
+   monGarage.afficher();
+#if 0   
    vector<Vehicule*> listeVehicules;
    listeVehicules.push_back(new Voiture(15000, 5));
    listeVehicules.push_back(new Voiture(12000, 3));
@@ -36,6 +42,7 @@ int main()
       delete listeVehicules[i];
       listeVehicules[i] = 0;
    }
+#endif
 
    return 0;
 }
