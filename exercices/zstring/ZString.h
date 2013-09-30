@@ -4,15 +4,16 @@
 class ZString
 {
    public:
-      Zstring();
-      Zstring(char*);
-      Zstring(const ZString &chaine); // constructeur de copie
-      ~Zstring();
+      ZString();
+      ZString(const char *chaine);
+      ZString(const ZString &chaine); // constructeur de copie
+      ~ZString();
 
    private:
+      int longueur (const char *chaine);
+      char* copie(const char *chaine);
       char *m_chaine;
       int m_longueur;
-
-}
+};
 
 #endif
