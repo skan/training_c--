@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=main.cpp Vehicule.cpp Voiture.cpp Moto.cpp Camion.cpp
+SOURCES=main.cpp Vehicule.cpp Voiture.cpp Moto.cpp Camion.cpp Garage.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=out
 

@@ -1,16 +1,21 @@
 #ifndef GARAGE_H
 #define GARAGE_H
 
-#include "Garage.h"
+#include <vector>
 #include "Vehicule.h"
 
 class Garage 
 {
    public:
-   void ajouter(Vehicule vehicule);
+
+   Garage();
+   ~Garage();
+   void ajouter(Vehicule *vehicule);
+   void afficher() const;
   
    private:
-   vector <Vehicule*> m_contenu;
+
+   std::vector <Vehicule*> m_contenu;
 };
 
 #endif
