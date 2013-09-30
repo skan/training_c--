@@ -10,6 +10,7 @@ class Vehicule
     virtual int NmbreRoues() const = 0;  //retourne le nombre de roues du Vehicule
     void afficheAnnee() const;
     virtual ~Vehicule();
+    static int compteur;
  
     protected:
     int m_prix;  //Chaque véhicule a un prix

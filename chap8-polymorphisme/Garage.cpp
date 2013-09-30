@@ -55,3 +55,5 @@ void Garage::methodeGarage()
 {
    cout << endl << "ceci est l'appel d'une methode statique" << endl;
 }
+
+int Garage::attributGarage = 5;

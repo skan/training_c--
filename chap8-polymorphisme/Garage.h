@@ -18,6 +18,7 @@ class Garage
    private:
 
    std::vector <Vehicule*> m_contenu;
+   static int attributGarage;
 };
 
 #endif

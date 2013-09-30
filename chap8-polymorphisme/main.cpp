@@ -27,5 +27,6 @@ int main()
    monGarage.afficher();
 
    Garage::methodeGarage();
+   cout << "il y a " << Vehicule::compteur << " dans le garage" << endl;
    return 0;
 }
