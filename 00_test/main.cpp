@@ -4,11 +4,15 @@
 int main (int argc, char *argv[])
 {
     QApplication    app(argc,argv);
-    QPushButton     bouton ("Salut les Zeros, la forme ?");
 
-    bouton.setText("pimp mon bouton");
+    QWidget         fenetre;
+    fenetre.setFixedSize(300,150);
+
+    QPushButton     bouton ("Pimp mon bouton",&fenetre);
     bouton.setToolTip("texte d'aide");
-    bouton.setFont(QFont("Courier"));
-    bouton.show();
+    bouton.setFont(QFont("Comic Sans MS",14));
+    bouton.setCursor(Qt::PointingHandCursor);
+
+    fenetre.show();
     return app.exec();
 }
