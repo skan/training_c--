@@ -1,14 +1,17 @@
+#include <QWidget>
 #include "MaFenetre.h"
+
 
 MaFenetre::MaFenetre(int w, int h) : QWidget()
 {
-    setFixedSize(w,h);
+    setFixedSize(w, h);
 
-    m_bouton = new QPushButton("Pimp mon bouton !", this);
-    m_bouton->setFont(QFont("Comic Sans MS",14));
-    m_bouton->setCursor(Qt::PointingHandCursor);
-    m_bouton->setIcon(QIcon("smile.png"));
-    m_bouton->move(60,50);
-    QObject::connect(m_bouton, SIGNAL(clicked()), qApp, SLOT(quit()));
+    m_lcd = new QLCDNumber(this);
+    m_lcd->setSegmentStyle(QLCDNumber::Flat);
+    m_lcd->move(50, 20);
+
+    m_slider = new QSlider(Qt::Horizontal, this);
+    m_slider->setGeometry(10, 60, 150, 20);
+
+    QObject::connect(m_slider, SIGNAL(valueChanged(int)), m_lcd, SLOT(display(int)));
 }
-

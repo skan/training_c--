@@ -63,7 +63,7 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +1 Class.cpp
-badd +1 main.cpp
+badd +29 main.cpp
 badd +1 Class.h
 badd +3 Vehicule.h
 badd +1 Vehicule.cpp
@@ -181,12 +181,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 21 - ((7 * winheight(0) + 11) / 22)
+let s:l = 32 - ((21 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-21
-normal! 03l
+32
+normal! 0
 tabedit Vehicule.cpp
 set splitbelow splitright
 set nosplitbelow
@@ -289,11 +289,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((14 * winheight(0) + 11) / 22)
+let s:l = 28 - ((21 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
+28
 normal! 0
 tabedit Garage.h
 set splitbelow splitright
@@ -397,11 +397,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 14 - ((13 * winheight(0) + 11) / 22)
+let s:l = 21 - ((19 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
+21
 normal! 03l
 tabedit Moto.cpp
 set splitbelow splitright
@@ -613,12 +613,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 37 - ((14 * winheight(0) + 11) / 22)
+let s:l = 59 - ((21 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-37
-normal! 06l
+59
+normal! 0
 tabedit Camion.cpp
 set splitbelow splitright
 set nosplitbelow
@@ -1261,11 +1261,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 11) / 22)
+let s:l = 13 - ((12 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
+13
 normal! 04l
 tabnext 1
 if exists('s:wipebuf')

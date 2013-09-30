@@ -1,18 +1,20 @@
-#ifndef MAFENETRE_H
-#define MAFENETRE_H
+#ifndef DEF_MAFENETRE
+#define DEF_MAFENETRE
 
 #include <QApplication>
 #include <QWidget>
 #include <QPushButton>
+#include <QLCDNumber>
+#include <QSlider>
 
-class MaFenetre : public QWidget // Herite de QWidget
+class MaFenetre : public QWidget
 {
     public:
-    MaFenetre();
     MaFenetre(int w, int h);
 
     private:
-    QPushButton *m_bouton;
+    QLCDNumber *m_lcd;
+    QSlider *m_slider;
 };
 
-#endif // MAFENETRE_H
+#endif
