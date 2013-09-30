@@ -1,5 +1,8 @@
+#include <iostream>
 #include <cstddef>
 #include "ZString.h"
+
+using namespace std;
 
 /************************************************************************ 
  * Constructeur & Destructeur
@@ -23,6 +26,30 @@ ZString::~ZString()
 {
    delete m_chaine;
 }
+/************************************************************************ 
+ * Public methods
+ * ************************************************************************/ 
+void ZString::afficher()
+{
+   cout << m_chaine << endl;
+}
+
+ZString ZString::operator=(const char *chaine)
+{
+   delete m_chaine;
+   m_chaine = copie(chaine);
+   m_longueur = longueur (chaine);
+   return *this;
+}
+
+ZString ZString::operator=(const ZString &chaine)
+{
+   delete m_chaine;
+   m_chaine = copie(chaine.m_chaine);
+   m_longueur = chaine.m_longueur;
+   return *this;
+}
+
 /************************************************************************ 
  * Private methods
  * ************************************************************************/ 

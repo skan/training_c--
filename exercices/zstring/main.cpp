@@ -7,7 +7,13 @@ using namespace std;
 int main()
 {
    ZString maChaine("skander");
-   ZString uneChaine();
+   ZString uneChaine("hamza");
+
+   maChaine.afficher();
+
+   maChaine = uneChaine;
+   maChaine.afficher();
+
 
     return 0;
 }
