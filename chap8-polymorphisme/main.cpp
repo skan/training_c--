@@ -26,5 +26,6 @@ int main()
    monGarage.supprimerVehicule(fiesta);
    monGarage.afficher();
 
+   Garage::methodeGarage();
    return 0;
 }

@@ -13,6 +13,7 @@ class Garage
    void ajouterVehicule(Vehicule *newVehicule);
    void supprimerVehicule(Vehicule *newVehicule);
    void afficher() const;
+   static void methodeGarage();
   
    private:
 

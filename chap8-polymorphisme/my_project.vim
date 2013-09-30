@@ -67,7 +67,7 @@ badd +1 main.cpp
 badd +1 Class.h
 badd +3 Vehicule.h
 badd +1 Vehicule.cpp
-badd +1 Voiture.cpp
+badd +20 Voiture.cpp
 badd +1 Voiture.h
 badd +1 Moto.cpp
 badd +1 Moto.h
@@ -181,11 +181,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 25 - ((17 * winheight(0) + 11) / 22)
+let s:l = 21 - ((7 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-25
+21
 normal! 03l
 tabedit Vehicule.cpp
 set splitbelow splitright
@@ -505,11 +505,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((0 * winheight(0) + 11) / 22)
+let s:l = 1 - ((0 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
+1
 normal! 0
 tabedit Garage.cpp
 set splitbelow splitright
@@ -613,13 +613,13 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 45 - ((16 * winheight(0) + 11) / 22)
+let s:l = 37 - ((14 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-45
-normal! 09l
-tabedit Voiture.cpp
+37
+normal! 06l
+tabedit Camion.cpp
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -721,11 +721,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 11) / 22)
+let s:l = 16 - ((12 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
+16
 normal! 0
 tabedit Moto.h
 set splitbelow splitright
@@ -829,11 +829,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 11) / 22)
+let s:l = 13 - ((12 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
+13
 normal! 04l
 tabedit Voiture.h
 set splitbelow splitright
@@ -943,7 +943,7 @@ exe s:l
 normal! zt
 12
 normal! 04l
-tabedit Camion.cpp
+tabedit Voiture.cpp
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -1045,11 +1045,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 13 - ((12 * winheight(0) + 11) / 22)
+let s:l = 18 - ((17 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
+18
 normal! 0
 tabedit Camion.h
 set splitbelow splitright
@@ -1153,11 +1153,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 11) / 22)
+let s:l = 12 - ((11 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
+12
 normal! 04l
 tabedit Vehicule.h
 set splitbelow splitright
@@ -1267,7 +1267,7 @@ exe s:l
 normal! zt
 10
 normal! 04l
-tabnext 10
+tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif

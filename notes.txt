@@ -20,5 +20,7 @@ chap 16 - polymorphisme
    collection heterogene: contien d'une certaine maniere des types differents
 
    methode virtuelle pure: dans toutes les classes filles de la classe mere , il y a une fonction "tel tel" mais dans la classe mere, cette classe n'existe pas
+
+   classe abstraire = classe possédant au moins une methode virtuelle pure. On ne peut pas créer d'objet a partir d'une classe abstraite.
    
- 
+
