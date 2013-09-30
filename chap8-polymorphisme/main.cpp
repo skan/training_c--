@@ -18,13 +18,13 @@ int main()
 {
    Garage monGarage;
    Voiture *fiesta = new Voiture(25000, 2010, 3);
+   Moto *harley = new Moto(5000, 2010, 380);
    monGarage.ajouterVehicule(new Voiture(12000,5));
    monGarage.ajouterVehicule(fiesta);
+   monGarage.ajouterVehicule(harley);
    monGarage.afficher();
-   //monGarage.supprimerVehicule(fiesta);
-   //monGarage.afficher();
-
-   fiesta->afficheNmbreRoues();
+   monGarage.supprimerVehicule(fiesta);
+   monGarage.afficher();
 
    return 0;
 }

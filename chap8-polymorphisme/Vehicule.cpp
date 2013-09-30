@@ -14,10 +14,6 @@ void Vehicule::affiche() const
 {
     cout << "Ceci est un vehicule coutant " << m_prix << "euros" << endl;
 }
-void Vehicule::afficheNmbreRoues() const
-{
-   cout << "Ce vehicule est : " ;
-}
 void Vehicule::afficheAnnee() const
 {
    cout << "ce vehicule est fabrique en " << m_annee << endl;

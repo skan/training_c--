@@ -9,7 +9,7 @@ class Moto : public Vehicule  //Une Moto EST UN Vehicule
     Moto(int prix, double vitesseMax);
     Moto(int prix, int annee, double vitesseMax);
     virtual void affiche() const;
-    virtual void afficheNmbreRoues() const;  //Affiche le nombre de roues du Vehicule
+    virtual int NmbreRoues() const;  //retourne le nombre de roues du Vehicule
     virtual ~Moto();
   
     private:

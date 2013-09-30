@@ -32,7 +32,10 @@ void Garage::afficher() const
 {
    unsigned int i(0);
    for (i=0 ; i < m_contenu.size() ; i++)
+   {
       m_contenu[i]->affiche();
+      cout << "nombre de roues = " << m_contenu[i]->NmbreRoues() << endl;
+   }
 }
 
 void Garage::supprimerVehicule(Vehicule *vehiculeAsupprimer)

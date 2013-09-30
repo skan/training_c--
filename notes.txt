@@ -4,10 +4,12 @@ chap 6 - derivation de type
    En faisant objetMere = objetFille;, on dirige le pointeur objetMere vers les attributs et méthodes hérités uniquement
    skh: utilisés par vraiment comprises ??? 
    skh: a tester en ajouter des methodes pour modifier les attributs des classes filles et meres et voir resultat apres affectation
+   j
 chap 6 - masquage
    masquage: Quand on écrit une fonction qui a le même nom que celle héritée de la classe mère
    démasquage, utiliser une fonction qui était masquée.
       l'opérateur :: appelé opérateur de résolution de portée. Il sert à déterminer quelle fonction (ou variable) utiliser quand il y a ambiguïté ou si il y a plusieurs possibilités.
+
 chap 16 - polymorphisme
    résolution statique des liens: c'est le type de la variable qui détermine quelle fonctin membre appeler et non sa vraie nature
    resolution dynamique des liens: faire en sorte a ce que le programme appelle la bonne version de la methode
@@ -17,6 +19,6 @@ chap 16 - polymorphisme
  
    collection heterogene: contien d'une certaine maniere des types differents
 
-
+   methode virtuelle pure: dans toutes les classes filles de la classe mere , il y a une fonction "tel tel" mais dans la classe mere, cette classe n'existe pas
    
  

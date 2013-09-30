@@ -7,7 +7,7 @@ class Vehicule
     Vehicule(int prix);
     Vehicule(int prix, int annee);
     virtual void affiche() const;  //Affiche une description du Vehicule
-    virtual void afficheNmbreRoues() const;  //Affiche le nombre de roues du Vehicule
+    virtual int NmbreRoues() const = 0;  //retourne le nombre de roues du Vehicule
     void afficheAnnee() const;
     virtual ~Vehicule();
  
