@@ -11,7 +11,8 @@ Garage::Garage()
 
 Garage::~Garage()
 {
-   for (int i(0) ; i < m_contenu.size() ; ++i)
+   unsigned int i(0);
+   for (i=0 ; i < m_contenu.size() ; i++)
    {
       delete m_contenu[i];
       m_contenu[i]=0;
@@ -22,13 +23,14 @@ Garage::~Garage()
  * Methodes
  * ************************************************************************/ 
 
-void Garage::ajouter(Vehicule* vehicule)
+void Garage::ajouterVehicule(Vehicule* vehicule)
 {
    m_contenu.push_back(vehicule);
 }
 
 void Garage::afficher() const
 {
-   for (int i = 0; i < m_contenu.size ; ++i)
+   unsigned int i(0);
+   for (i=0 ; i < m_contenu.size() ; i++)
       m_contenu[i]->affiche();
 }

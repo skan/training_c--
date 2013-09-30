@@ -10,7 +10,7 @@ class Garage
 
    Garage();
    ~Garage();
-   void ajouter(Vehicule *vehicule);
+   void ajouterVehicule(Vehicule *newVehicule);
    void afficher() const;
   
    private:
