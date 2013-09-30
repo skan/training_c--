@@ -21,6 +21,8 @@ int main()
    monGarage.ajouterVehicule(new Voiture(12000,5));
    monGarage.ajouterVehicule(fiesta);
    monGarage.afficher();
+   monGarage.supprimerVehicule(fiesta);
+   monGarage.afficher();
 #if 0   
    vector<Vehicule*> listeVehicules;
    listeVehicules.push_back(new Voiture(15000, 5));

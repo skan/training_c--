@@ -34,3 +34,17 @@ void Garage::afficher() const
    for (i=0 ; i < m_contenu.size() ; i++)
       m_contenu[i]->affiche();
 }
+
+void Garage::supprimerVehicule(Vehicule *vehiculeAsupprimer)
+{
+   unsigned int i(0);
+   for (i=0 ; i < m_contenu.size() ; i++)
+   {
+      if (m_contenu[i]==vehiculeAsupprimer)
+      {
+         delete m_contenu[i];
+         m_contenu.erase(m_contenu.begin() + i);
+         break;
+      }
+   }
+}
