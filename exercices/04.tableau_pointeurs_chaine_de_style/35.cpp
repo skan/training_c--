@@ -6,20 +6,20 @@ int max (int *t)
 {
    int maximal = 0;
    int *adt;
-   for (int i = 0; i < 10 ; i++)
+   for (adt = t+5 ; adt >= t ; adt--)
    {
-      if (t[i] > maximal)
-         maximal = t[i];
+      if (*(adt) > maximal)
+         maximal = *adt;
    }
    return maximal;
 }
 
 int main()
 {
-   int t [10] ;
+   int t [5] ;
    int i(0);
 
-   for (i = 0; i < 10 ; i++)
+   for (i = 0; i < 5 ; i++)
    {
       cin >> *(t+i);
    }
