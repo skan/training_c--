@@ -11,6 +11,12 @@ CFLAGS=-c -Wall
 34.o: 34.cpp
 	$(CC) $(CFLAGS) 34.cpp
 
+35: 35.o
+	$(CC) 35.o -o 35.bin
+
+35.o: 35.cpp
+	$(CC) $(CFLAGS) 35.cpp
+
 clean:
 	rm -rf *o *.bin
 
