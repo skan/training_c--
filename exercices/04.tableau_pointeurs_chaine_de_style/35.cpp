@@ -2,28 +2,31 @@
 #include <iostream>
 using namespace std ;
 
-int max (int *t)
+void calulMaxMin (int *t, int *maximal, int *minimal)
 {
-   int maximal = 0;
    int *adt;
-   for (adt = t+5 ; adt >= t ; adt--)
+   *maximal=*minimal=*(t+4);
+   for (adt = t+4 ; adt >= t ; adt--)
    {
-      if (*(adt) > maximal)
-         maximal = *adt;
+      if (*(adt) > *maximal)
+         *maximal = *adt;
+      if (*(adt) < *minimal)
+         *minimal = *adt;
    }
-   return maximal;
 }
 
 int main()
 {
    int t [5] ;
    int i(0);
+   int min(0), max(0) ;
 
    for (i = 0; i < 5 ; i++)
    {
       cin >> *(t+i);
    }
-   cout << "la valeur max du tableau est " << max(t) << endl;
+   calulMaxMin(t,&max,&min);
+   cout << "la valeur max du tableau est " << max << " et la valeur min " << min << endl;
 
 #if 0
    int * adt ;
