@@ -15,6 +15,19 @@ void calulMaxMin (int *t, int nval, int *maximal, int *minimal)
    }
 }
 
+void calulMaxMin_reference (int *t, int nval, int &maximal, int &minimal)
+{
+   int *adt;
+   maximal=minimal=*(t+nval-1);
+   for (adt = t+nval-1 ; adt >= t ; adt--)
+   {
+      if (*(adt) > maximal)
+         maximal = *adt;
+      if (*(adt) < minimal)
+         minimal = *adt;
+   }
+
+}
 int main()
 {
    int const nval = 5;
@@ -23,7 +36,8 @@ int main()
    int min(0), max(0) ;
 
    for (i = 0; i < nval ; i++) cin >> *(t+i);
-   calulMaxMin(t,nval,&max,&min);
+   //calulMaxMin(t,nval,&max,&min);
+   calulMaxMin_reference(t,nval,max,min);
    cout << "la valeur max du tableau est " << max << " et la valeur min " << min << endl;
 
 #if 0
