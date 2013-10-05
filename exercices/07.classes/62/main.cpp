@@ -8,5 +8,7 @@ int main()
    a.affiche();
    a.deplace(1,-2);
    a.affiche();
+   a.homothetie(3);
+   a.affiche();
    return 0;
 }

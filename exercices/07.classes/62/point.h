@@ -6,7 +6,8 @@ class point
    public:
       point(float,float);
       void deplace (float,float);
-      void affiche ();
+      void affiche () const;
+      void homothetie (float);
 
    private:
       float m_x;
