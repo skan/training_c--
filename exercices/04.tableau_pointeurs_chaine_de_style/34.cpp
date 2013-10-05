@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std ;
 
+
+
+#if 0
 int main()
 {
    int t [3] ;
@@ -20,3 +23,4 @@ int main()
    /* 5 */
 }
 
+#endif
