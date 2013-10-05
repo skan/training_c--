@@ -1,2 +1,3 @@
 44: afficher une chaine de char en utilisant les pointeurs
 46: tableau de chaine de charactere
+47: structures aved 3 types de passage (valeur, reference, addresse)
