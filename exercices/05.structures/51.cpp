@@ -43,9 +43,7 @@ void fill_new(personne &a)
 
    if (reponse == 'O')
    {
-      a.date_poste.jour = a.date_embauche.jour;
-      a.date_poste.mois = a.date_embauche.mois;
-      a.date_poste.annee = a.date_embauche.annee;
+      a.date_poste = a.date_embauche;
    }
    else
    {
