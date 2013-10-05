@@ -7,7 +7,7 @@ struct point
    int x,y;
 };
 
-point oppose(point const &point);
+point oppose (point const *);
 void afficher (point const &a);
 
 int main ()
@@ -15,7 +15,7 @@ int main ()
    point a {'A', 2, 3};
 
    afficher(a);
-   afficher(oppose(a)); 
+   afficher(oppose(&a)); 
 
    return 0;
 }
@@ -26,13 +26,13 @@ void afficher (point const &a)
    return;
 }
 
-point oppose (point const &a)
+point oppose (point const *a)
 {
    point b;
 
-   b.x = a.x * -1;
-   b.y = a.y * -1;
-   b.c= a.c;
+   b.x = a->x * -1;
+   b.y = a->y * -1;
+   b.c= a->c;
 
    return b;
 
