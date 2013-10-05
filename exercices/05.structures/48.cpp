@@ -31,6 +31,7 @@ void raz (enreg &a)
    a.stock = 0;
    a.prix = 0;
    for (i = 0; i < MOIS ; i++) a.ventes[i]=0;
+   return;
 }
 void afficher (enreg const &a)
 {
@@ -38,4 +39,5 @@ void afficher (enreg const &a)
    cout << a.stock << " " << a.prix << " " << endl;
    for (i = 0; i < MOIS ; i++) cout << a.ventes[i] << " ";
    cout << endl;
+   return;
 }

@@ -5,6 +5,11 @@ CC=g++
 # options I'll pass to the compiler.
 CFLAGS=-c -Wall -g
 
+49: 49.o
+	$(CC) 49.o -o 49.bin
+49.o: 49.cpp
+	$(CC) $(CFLAGS) 49.cpp
+
 48: 48.o
 	$(CC) 48.o -o 48.bin
 48.o: 48.cpp
