@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int NB = 5;
+const int NB = 3;
 
 struct point
 {
@@ -10,13 +10,30 @@ struct point
 };
 
 void afficher (point *a);
+void remplir (point *a);
 
 int main ()
 {
    point courbe[NB];
-   afficher(courbe);
+   remplir(courbe);
 
    return 0;
+}
+
+void remplir (point *a)
+{
+   int i(0);
+   for (i= 0; i < NB; i++)
+   {
+      cout << "point numero " << i << endl;
+      cout << "\t nom: ";
+      cin >> a[i].c;
+      cout << "\t x: ";
+      cin >> a[i].x;
+      cout << "\t y: ";
+      cin >> a[i].y;
+   }
+   afficher (a);
 }
 
 void afficher (point *a)
