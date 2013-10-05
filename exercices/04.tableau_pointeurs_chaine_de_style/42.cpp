@@ -22,6 +22,10 @@ int main()
       cout << *(t1_p + i) << "|" << *(t2_p + i) << endl;
    }
 
+   // freeing memory
+   delete t1_p;
+   delete t2_p;
+
    return 0;
    
 }
