@@ -35,7 +35,7 @@ set_int::~set_int ()
 
 void set_int::ajoute (int nb)
 {
-   if (!appartient (nb)) ;
+   if (!appartient (nb))
    {
       nelem ++;
       noeud *actuel = new noeud;
