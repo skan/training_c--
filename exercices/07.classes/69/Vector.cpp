@@ -13,7 +13,6 @@ void Vector::afficher() const
    cout << ", " << m_z << endl; ;
 }
 
-//int Vector::coincide(Vector a)
 int Vector::coincide(Vector &a)
 {
    if (a.m_x == m_x && a.m_y == m_y && a.m_z == m_z)
@@ -27,4 +26,12 @@ int Vector::coincide(Vector *a)
       return 1;
    else
       return 0;
+}
+
+Vector Vector::addition (Vector &adv)
+{
+   adv.m_x += m_x;
+   adv.m_y += m_y;
+   adv.m_z += m_z;
+   return adv;
 }

@@ -10,11 +10,10 @@ int main()
    Vector b(2,3,4);
    a.afficher();
    b.afficher();
-   a.afficher();
-   t.afficher();
 
-   cout << "coincide a & c ? : " << a.coincide(&c) << endl; 
-   cout << "coincide a & c ? : " << a.coincide(c) << endl; 
-   cout << "coincide a & b ? : " << a.coincide(b) << endl; 
+   cout << "addition " << endl;
+   c = a.addition(b);
+   c.afficher();
+
    return 0;
 }
