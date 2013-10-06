@@ -7,7 +7,7 @@ class Schar
 {
    public:
       Schar(const char*);
-//      void ajouter(char);
+      void ajouter(char);
       int getCardinal() const;
       int chercher(char) const;
       void afficher() const;

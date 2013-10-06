@@ -35,3 +35,10 @@ int Schar::chercher(char c) const
    }
    return 0;
 }
+
+void Schar::ajouter(char c)
+{
+   m_char[m_cardinal]=c;
+   m_cardinal+=1;
+   m_char[m_cardinal]='\0';
+}
