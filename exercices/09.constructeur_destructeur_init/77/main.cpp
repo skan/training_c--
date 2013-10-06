@@ -3,10 +3,10 @@
 using namespace std ;
 main()
 { 
-   set_int ens ;
+   set_int ens(5);
    cout << "donnez 20 entiers \n" ;
    int i, n ;
-   for (i=0 ; i<20 ; i++)
+   for (i=0 ; i<5 ; i++)
    { 
       cin >> n ;
       ens.ajoute (n) ;
