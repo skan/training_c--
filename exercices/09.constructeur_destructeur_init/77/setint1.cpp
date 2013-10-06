@@ -57,4 +57,22 @@ int set_int::cardinal ()
 }
 
 
+void set_int::init ()
+{
+   courant = debut ;
+}
+int set_int::prochain ()
+{ 
+   if (courant)
+   {
+      int val = courant->valeur ;
+      courant = courant->suivant ;
+      return val ;
+   }
+   else return 0 ;
+}
+int set_int::existe ()
+{ 
+   return (courant != 0) ;
+}
 

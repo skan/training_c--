@@ -10,17 +10,20 @@ struct noeud
 class set_int
 {
    noeud *debut;
-   int * adval ;// adresse du tableau des valeurs
+   noeud *courant;
    int nelem ; // nombre courant d'éléments
 
    public :
    set_int (int = 5) ;
    set_int (set_int &) ;
    ~set_int () ;
+   int existe ();
 
    void ajoute (int) ;
    int appartient (int) ;
    int cardinal () ;
+   void init ();
+   int prochain ();
 } ;
 
 #endif

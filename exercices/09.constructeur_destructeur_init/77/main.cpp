@@ -1,7 +1,7 @@
 #include "setint1.h"
 #include <iostream>
 using namespace std ;
-main()
+int main()
 { 
    set_int ens(5);
    cout << "donnez 20 entiers \n" ;
@@ -12,5 +12,9 @@ main()
       ens.ajoute (n) ;
    }
    cout << "il y a : " << ens.cardinal () << " entiers différents\n" ;
+   ens.init();
+   while (ens.existe()) cout << ens.prochain() << " ";
+   cout  << endl;
+   return 0;
 }
 
