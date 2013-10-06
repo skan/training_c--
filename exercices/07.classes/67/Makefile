@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=main.cpp Schar.cpp 
+SOURCES=main.cpp Schar.cpp set_char.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=out
 
