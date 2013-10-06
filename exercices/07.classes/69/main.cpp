@@ -15,5 +15,6 @@ int main()
    c = a.addition(b);
    c.afficher();
 
+   cout << "nombre de points: " << Vector::getCompteur() << endl;
    return 0;
 }

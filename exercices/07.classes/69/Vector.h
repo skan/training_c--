@@ -9,7 +9,9 @@ class Vector
       int coincide(Vector &);
       int coincide(Vector *);
       Vector addition (Vector &);
+      static int getCompteur();
    private:
+      static int compteur;
       int m_x;
       int m_y;
       int m_z;

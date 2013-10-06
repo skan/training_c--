@@ -2,8 +2,11 @@
 using namespace std;
 #include "Vector.h"
 
+int Vector::compteur = 0;
+
 Vector::Vector(int a, int b, int c) : m_x(a), m_y(b), m_z(c)
 {
+   compteur++;
 }
 
 void Vector::afficher() const
@@ -34,4 +37,9 @@ Vector Vector::addition (Vector &adv)
    adv.m_y += m_y;
    adv.m_z += m_z;
    return adv;
+}
+
+int Vector::getCompteur()
+{
+   return compteur;
 }
