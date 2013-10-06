@@ -7,6 +7,7 @@ int Vector::compteur = 0;
 Vector::Vector(int a, int b, int c) : m_x(a), m_y(b), m_z(c)
 {
    compteur++;
+   cout << "hello " << this << endl;
 }
 
 void Vector::afficher() const
@@ -42,4 +43,10 @@ Vector Vector::addition (Vector &adv)
 int Vector::getCompteur()
 {
    return compteur;
+}
+
+Vector::~Vector()
+{
+   cout << " bye bye " << this << endl;
+   compteur--;
 }

@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+   Vector *s = new Vector(1,3);
    Vector t;
    Vector a(1);
    Vector c(1);
@@ -16,5 +17,6 @@ int main()
    c.afficher();
 
    cout << "nombre de points: " << Vector::getCompteur() << endl;
+   delete s;
    return 0;
 }
