@@ -4,13 +4,11 @@
 class Vector
 {
    public:
-      Vector(int a=0 ,int b=0 ,int c=0 )
-      {
-         m_x = a;
-         m_y = b;
-         m_z = c;
-      }
+      Vector(int a=0 ,int b=0 ,int c=0 );
       void afficher() const;
+      //int coincide(Vector);
+      int coincide(Vector &);
+      int coincide(Vector *);
    private:
       int m_x;
       int m_y;
