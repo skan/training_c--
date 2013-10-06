@@ -13,6 +13,8 @@ int main()
    a.afficher();
    t.afficher();
 
+   cout << "coincide a & c ? : " << a.coincide(&c) << endl; 
    cout << "coincide a & c ? : " << a.coincide(c) << endl; 
+   cout << "coincide a & b ? : " << a.coincide(b) << endl; 
    return 0;
 }
