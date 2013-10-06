@@ -4,13 +4,6 @@ using namespace std;
 
 int main()
 {
-   Point *a = new Point();
-   Point *b = new Point();
-   Point *c = new Point();
-   Point *d = new Point();
-
-   delete b;
-   delete d;
-   delete a;
-   delete c;
+   Point *a = new Point[4];
+   delete [] a ;
 }
