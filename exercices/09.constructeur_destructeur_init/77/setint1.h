@@ -1,7 +1,16 @@
+#ifndef SETINT_H
+#define SETINT_H
+
+struct noeud
+{
+   int valeur;
+   noeud* suivant;
+};
+
 class set_int
 {
+   noeud *debut;
    int * adval ;// adresse du tableau des valeurs
-   int nmax ; // nombre maxi d'éléments
    int nelem ; // nombre courant d'éléments
 
    public :
@@ -14,3 +23,4 @@ class set_int
    int cardinal () ;
 } ;
 
+#endif
