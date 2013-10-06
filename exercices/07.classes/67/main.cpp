@@ -6,18 +6,22 @@ using namespace std;
 
 int main()
 {
-   Schar s("skander");
-   s.afficher();
-   cout << s.getCardinal() << endl;
-   cout << s.chercher('s') << endl;
-   cout << s.chercher('f') << endl;
-   s.ajouter(' ');
-   s.ajouter('h');
-   s.afficher();
-   cout << s.getCardinal() << endl;
-
+   cout << "utilisation de ma version " << endl;
+   {
+      Schar s("skander");
+      s.afficher();
+      cout << s.getCardinal() << endl;
+      cout << s.chercher('s') << endl;
+      cout << s.chercher('f') << endl;
+      s.ajouter(' ');
+      s.ajouter('h');
+      s.afficher();
+      cout << s.getCardinal() << endl;
+   }
+   
    cout << "utilisation de set_char " << endl;
-   { set_char ens ;
+   {
+      set_char ens ;
       char mot [81] ;
       cout << "donnez un mot " ;
       cin >> mot ;
