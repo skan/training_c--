@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall -g
 LDFLAGS=
-SOURCES=main.cpp vect.cpp 
+SOURCES=main.cpp vect.cpp matrice.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=out
 
