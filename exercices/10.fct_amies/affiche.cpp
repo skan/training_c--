@@ -1,9 +1,10 @@
-#define <iostream>
+#include <iostream>
 using namespace std;
 
-class a;
+#include "point.h"
 
-void affiche(&point)
+
+void affiche(const point &a)
 {
-   cout << "point : (" << point.x << "," << point.y<<")" << endl;
+   cout << "point : (" << a.x << "," << a.y<<")" << endl;
 }

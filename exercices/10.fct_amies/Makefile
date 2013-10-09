@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall -g
 LDFLAGS=
-SOURCES=main.cpp point.cpp affiche.cpp
+SOURCES=main.cpp affiche.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=out
 
