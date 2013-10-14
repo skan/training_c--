@@ -14,6 +14,13 @@ vect& vect::operator = (vect const a)
    z = a.z;
    return *this;
 }
+int vect::operator == (vect const a)
+{
+   if (x == a.x && y == a.y && z == a.z)
+      return 1;
+   else
+      return 0;
+}
 #else
 void operator = (vect &a, vect const b)
 {

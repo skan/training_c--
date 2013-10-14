@@ -11,6 +11,7 @@ class vect
       }
 #if USE_MEMBER_FCT
       vect& operator = (vect const);
+      int operator == (vect const);
 #else
       friend void operator = (vect &, vect const);
 #endif
