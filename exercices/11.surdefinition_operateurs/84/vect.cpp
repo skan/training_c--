@@ -23,17 +23,25 @@ int vect::operator == (vect const a)
 }
 int vect::operator != (vect const a)
 {
-   if (x == a.x && y == a.y && z == a.z)
+   if (*this == a)
       return 0;
    else
       return 1;
 }
 #else
-void operator = (vect &a, vect const b)
+int operator == (vect const a, vect const b)
 {
-   a.x + b.x;
-   a.y = b.y;
-   a.z = b.z;
+   if (a.x == b.x && a.y == b.y && a.z == b.z)
+      return 1;
+   else
+      return 0;
 }
 
+int operator != (vect const a, vect const b)
+{
+   if (a == b)
+      return 0;
+   else 
+      return 1;
+}
 #endif

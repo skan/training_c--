@@ -9,7 +9,7 @@ int main()
    a.affiche();
    vect b(2,1,0);
    //a = b;
-   a.affiche();
+   b.affiche();
    cout << "a == b ? : " << (a==b) << endl;
    cout << "a != b ? : " << (a!=b) << endl;
 

@@ -14,7 +14,8 @@ class vect
       int operator == (vect const);
       int operator != (vect const);
 #else
-      friend void operator = (vect &, vect const);
+      friend int operator == (vect const, vect const);
+      friend int operator != (vect const, vect const);
 #endif
       void affiche() const;
 
