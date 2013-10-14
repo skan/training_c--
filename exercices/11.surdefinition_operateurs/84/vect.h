@@ -1,7 +1,7 @@
 #ifndef VECT_H
 #define VECT_H
 
-#define USE_MEMBER_FCT 1
+#define USE_MEMBER_FCT 0
 class vect
 {
    public:
@@ -16,6 +16,8 @@ class vect
 #else
       friend int operator == (vect const, vect const);
       friend int operator != (vect const, vect const);
+      friend vect operator + (vect const, vect const);
+      friend float operator * (vect const, vect const);
 #endif
       void affiche() const;
 
