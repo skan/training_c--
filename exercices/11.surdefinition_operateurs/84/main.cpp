@@ -11,6 +11,7 @@ int main()
    //a = b;
    a.affiche();
    cout << "a == b ? : " << (a==b) << endl;
+   cout << "a != b ? : " << (a!=b) << endl;
 
 }
 
