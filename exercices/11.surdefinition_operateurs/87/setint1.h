@@ -15,9 +15,10 @@ class set_int
 
    public :
    set_int (int = 5) ;
-   set_int (set_int &) ;
+   set_int (set_int const &) ;
    ~set_int () ;
    int existe ();
+   void operator = (const set_int &);
 
    void ajoute (int) ;
    int appartient (int) ;

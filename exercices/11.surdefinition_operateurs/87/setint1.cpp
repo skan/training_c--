@@ -5,7 +5,7 @@ set_int::set_int (int dim)
    nelem = 0 ;
 }
 
-set_int::set_int (set_int & e)       // ou : set_int::set_int (const set_int & e)
+set_int::set_int (set_int const & e)       // ou : set_int::set_int (const set_int & e)
 {
    nelem = e.nelem ; // création d'une nouvelle liste identique à l'ancienne
    noeud * adsource = e.debut ;
@@ -46,7 +46,8 @@ void set_int::ajoute (int nb)
 }
 
 int set_int::appartient (int nb)
-{ noeud * courant = debut ;
+{ 
+   noeud * courant = debut ;
    while (courant && (courant->valeur != nb) ) courant = courant->suivant ;
    return (courant != 0) ;
 }
@@ -76,3 +77,54 @@ int set_int::existe ()
    return (courant != 0) ;
 }
 
+void set_int::operator = (const set_int &e)
+{
+   if (this == &e) // affectation du meme objet
+   {
+      return;
+   }
+   else
+   {
+      noeud * adsource = e.debut ;
+      noeud *toClean = courant->suivant;
+      courant = debut;
+
+      while (adsource)
+      {
+         if (courant != 0)
+         {
+            //debut = courant;
+            courant->valeur = adsource->valeur;
+            if (adsource->suivant == 0)
+            {
+               toClean = courant->suivant;
+               courant->suivant=0;
+            }
+            courant = courant->suivant;
+
+         }
+         else
+         {
+            nelem ++;
+            noeud *courant = new noeud;
+            courant->valeur = adsource->valeur;
+            courant->suivant = debut;
+            debut = courant;
+         }
+         adsource = adsource->suivant ; // nœud suivant ancienne liste
+      }
+      
+#if 1
+      if (nelem > e.nelem) // effacer les structures en trop
+      {
+         nelem = e.nelem;
+         while (toClean != 0)
+         {
+            noeud *adn = toClean;
+            toClean = toClean->suivant;
+            delete adn;
+         }
+      }
+#endif
+   }
+}
