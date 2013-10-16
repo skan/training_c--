@@ -10,8 +10,9 @@ class vect
          v[1]=c2;
          v[2]=c3;
       }
-      float* operator [] (int i)
+      float& operator [] (int i)
       {
+         if (i <= 0 || i > 3) i = 0;
          return *(v+i);
       }
       void affiche() const;
