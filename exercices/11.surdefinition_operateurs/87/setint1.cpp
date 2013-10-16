@@ -77,6 +77,7 @@ int set_int::existe ()
    return (courant != 0) ;
 }
 
+#if 0
 void set_int::operator = (const set_int &e)
 {
    if (this == &e) // affectation du meme objet
@@ -114,7 +115,6 @@ void set_int::operator = (const set_int &e)
          adsource = adsource->suivant ; // nœud suivant ancienne liste
       }
       
-#if 1
       if (nelem > e.nelem) // effacer les structures en trop
       {
          nelem = e.nelem;
@@ -125,6 +125,36 @@ void set_int::operator = (const set_int &e)
             delete adn;
          }
       }
+   }
+}
 #endif
+
+set_int& set_int::operator = (const set_int &e)
+{
+   if (&e != this)
+   {
+      /*Supprime les ancies elements*/
+      noeud *adsource = e.debut;
+      noeud *courant = debut;
+      noeud *temp;
+      while (courant)
+      {
+         temp=courant;
+         courant = courant->suivant;
+         delete temp;
+      }
+      debut = 0;
+      nelem = 0;
+      /*Ajoute les nouveaux*/
+      while(adsource)
+      {
+         noeud *courant = new noeud;
+         courant->valeur=adsource->valeur;
+         courant->suivant=debut;
+         debut=courant;
+         adsource = adsource->suivant;
+         nelem++;
+      }
+      return *this;
    }
 }

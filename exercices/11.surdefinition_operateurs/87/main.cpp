@@ -18,6 +18,7 @@ int main()
    cout  << endl;
 
    set_int copie(1);
+   set_int copie2(4);
    for (i=0 ; i<9 ; i++)
    { 
       //cin >> n ;
@@ -25,10 +26,10 @@ int main()
       copie.ajoute (n) ;
    }
    cout << "il y a : " << copie.cardinal () << " entiers différents\n" ;
-   copie = ens;
-   cout << "il y a : " << copie.cardinal () << " entiers différents\n" ;
+   copie2 = copie = ens;
+   cout << "il y a : " << copie2.cardinal () << " entiers différents\n" ;
    copie.init();
-   while (copie.existe()) cout << copie.prochain() << " ";
+   while (copie2.existe()) cout << copie2.prochain() << " ";
    cout  << endl;
    return 0;
 }

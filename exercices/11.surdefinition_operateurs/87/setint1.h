@@ -18,7 +18,10 @@ class set_int
    set_int (set_int const &) ;
    ~set_int () ;
    int existe ();
+#if 0
    void operator = (const set_int &);
+#endif
+   set_int & operator = (const set_int &); // affectation multiple
 
    void ajoute (int) ;
    int appartient (int) ;
