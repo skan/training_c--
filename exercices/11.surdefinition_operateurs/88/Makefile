@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall -g
 LDFLAGS=
-SOURCES=main.cpp set_int.cpp 
+SOURCES=main.cpp skInt.cpp 
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=out
 

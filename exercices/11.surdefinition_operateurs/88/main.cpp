@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "set_int.h"
+#include "skInt.h"
 
 
 main()
