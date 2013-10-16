@@ -8,6 +8,7 @@ vect::vect(int l,int c)
 {
    v = new int[size=l*c];
    nb_col = c;
+   for (int i=0; i < size;i++) v[i]=0;
 }
 
 /************************************************************************ 
@@ -24,5 +25,5 @@ vect::~vect()
 int& vect::operator () (int nbl, int nbc)
 {
    if (nbl < 0 || nbc < 0 || nbl*nbc > size ) nbl = nbc = 0;
-   return *(v+(nbl*nb_col + nbc));
+   return *(v + nbl*nb_col + nbc);
 }
